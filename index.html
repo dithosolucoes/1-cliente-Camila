@@ -1,338 +1,499 @@
-<!ddoctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Lara Luíza | Maquiagem BH — beleza real, pele glow</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Maquiagem que realça belezas reais em Lourdes — Belo Horizonte. Noivas, madrinhas, fast makeup e maquiagem artística. Agende pelo WhatsApp.">
-  <meta property="og:title" content="Lara Luíza | Maquiagem BH">
-  <meta property="og:description" content="Beleza real, pele glow. Noivas, madrinhas, fast makeup e artística em Lourdes — BH.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.seudominio.com/">
-  <meta name="theme-color" content="#f7e9e3">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Camila Rocha • Maquiadora em Diadema/SP</title>
+  <meta name="description" content="Maquiadora em Diadema/SP. Pele luminosa, técnica leve e durável. +100 alunas de automaquiagem • 9 anos de experiência. Agende pelo WhatsApp." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Camila Rocha • Maquiadora em Diadema/SP" />
+  <meta property="og:description" content="Pele luminosa, técnica leve e durável. Agende seu horário pelo WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="FOTO-CAMILA-HERO.jpg" /> <!-- TROCAR AQUI -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#0f0e11;           /* fundo profundo para valorizar pele */
-      --panel:#16141a;
-      --fg:#f6f1ee;           /* texto principal */
-      --muted:#c7bdb8;
-      --accent:#ffc7a6;       /* pêssego glow */
-      --accent-2:#c69c6d;     /* dourado suave */
-      --ok:#8bd3a6;
-      --shadow:hsla(15, 60%, 6%, .55);
-      --radius:16px;
-      --gap:20px;
+      /* Paleta quente e acessível */
+      --bg:#FAF7F5;
+      --paper:#FFFFFF;
+      --ink:#141211;
+      --muted:#6E6865;
+      --accent:#8E4B3B;   /* rosé queimado (contraste AA com texto branco) */
+      --accent-2:#D6B28F; /* champagne */
+      --ring:rgba(142,75,59,.3);
+      --radius:18px;
+      --shadow:0 10px 30px rgba(20,18,17,.07);
+      --border:#EDE3DA;
     }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#faf7f5; --panel:#ffffff; --fg:#201a18; --muted:#6e5e58; --shadow:rgba(15,8,4,.08) }
-    }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0; font:400 16px/1.5 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial;
-      color:var(--fg); background:
-      radial-gradient(1200px 600px at 80% -10%, rgba(255,199,166,.18), transparent 60%),
-      radial-gradient(900px 500px at -10% 10%, rgba(198,156,109,.16), transparent 60%),
-      var(--bg);
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
     }
-    a{color:inherit}
-    .wrap{max-width:1200px;margin:auto;padding:24px}
-    header{
-      position:sticky; top:0; backdrop-filter:saturate(1.2) blur(8px);
-      background:color-mix(in oklab, var(--bg), transparent 65%); border-bottom:1px solid color-mix(in oklab, var(--fg), transparent 92%);
-      z-index:50;
-    }
-    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{
-      inline-size:40px; block-size:40px; border-radius:50%;
-      background:
-        radial-gradient(60% 60% at 35% 35%, var(--accent), transparent 60%),
-        radial-gradient(70% 70% at 70% 70%, var(--accent-2), transparent 60%),
-        linear-gradient(135deg,#1a171d,#0b0a0c);
-      box-shadow:0 6px 20px var(--shadow), inset 0 0 0 1px rgba(255,255,255,.06);
-    }
-    .brand h1{font:600 18px/1.2 ui-sans-serif,system-ui;margin:0}
-    .ghost{color:var(--muted); font-size:13px}
+
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    img{max-width:100%;height:auto;display:block}
+
+    /* ===== Buttons ===== */
     .btn{
-      --btn-bg: var(--fg); --btn-fg: #1a1210;
-      display:inline-flex; align-items:center; gap:.6rem; padding:.85rem 1.1rem; border-radius:999px;
-      background:var(--btn-bg); color:var(--btn-fg); border:1px solid color-mix(in oklab, var(--btn-bg), #000 10%);
-      text-decoration:none; font-weight:600; box-shadow:0 8px 20px var(--shadow);
-      transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
+      display:inline-flex;align-items:center;gap:.55rem;
+      padding:.9rem 1.15rem;border-radius:14px;font-weight:700;
+      text-decoration:none;border:0;cursor:pointer;transition:.18s ease;
+      white-space:nowrap
     }
-    .btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px var(--shadow)}
-    .btn.secondary{--btn-bg:transparent; --btn-fg:var(--fg); border-color:color-mix(in oklab, var(--fg), transparent 82%)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:60px 0}
-    .hero h2{font:800 clamp(28px,5vw,56px)/1.05 ui-sans-serif;margin:0 0 12px}
-    .lead{font-size:18px;color:var(--muted);max-width:52ch}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-    .chip{font:600 12px/1 ui-sans-serif;letter-spacing:.2px;color:#1b1210;background:color-mix(in oklab, var(--accent), #fff 25%);
-      border:1px solid color-mix(in oklab, var(--accent-2), #000 8%);border-radius:999px;padding:8px 12px}
-    .card{
-      background:linear-gradient(180deg, color-mix(in oklab, #fff, var(--panel) 15%), var(--panel));
-      border:1px solid color-mix(in oklab, var(--fg), transparent 90%);
-      border-radius:var(--radius); padding:20px; box-shadow:0 10px 30px var(--shadow)
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+    .btn-primary:hover{filter:brightness(.95)}
+    .btn-ghost{background:#1a1716;color:#fff}
+    .btn-ghost:hover{filter:brightness(1.08)}
+    .btn-outline{background:#fff;border:1px solid var(--border);color:#5c524b}
+
+    /* ===== Header ===== */
+    header.sticky{
+      position:sticky;top:0;z-index:40;
+      background:rgba(255,255,255,.78);
+      backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--border)
     }
-    .hero .photo{
-      position:relative; aspect-ratio:3/4; border-radius:28px; overflow:hidden; box-shadow:0 30px 60px var(--shadow);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.5)),
-        url('img/lara-hero.jpg') center/cover no-repeat; /* ↺ Trocar por foto real */
+    #brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
+    #brand-badge{height:42px;width:42px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+      display:grid;place-items:center;color:#fff;font-weight:800}
+    nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+    nav a:hover{color:var(--ink)}
+    #menuBtn{display:none}
+    @media (max-width:900px){
+      #navLinks{display:none}
+      #menuBtn{display:inline-flex}
+      nav a{padding:.5rem 0}
     }
-    .badge{
-      position:absolute; right:14px; bottom:14px; padding:.6rem .8rem; border-radius:12px;
-      background:rgba(0,0,0,.5); color:#fff; font:600 12px/1 ui-sans-serif; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.1)
-    }
-    section{padding:40px 0}
-    h3{font:800 22px/1.1 ui-sans-serif;margin:0 0 12px}
-    .grid{display:grid;gap:20px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    .service .title{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-    .service small{color:var(--muted)}
-    .price{font-weight:800;color:var(--accent-2)}
-    .cta{
-      display:flex;flex-wrap:wrap;gap:12px;margin-top:18px
-    }
-    .panel{padding:18px;border:1px dashed color-mix(in oklab, var(--fg), transparent 85%);border-radius:14px}
-    .bna{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
-    .frame{
-      position:relative; border-radius:14px; overflow:hidden; aspect-ratio:4/5; background:#2a2623; 
-      box-shadow:0 8px 20px var(--shadow), inset 0 0 0 1px rgba(255,255,255,.05)
-    }
-    .before,.after{position:absolute; inset:0; background-size:cover; background-position:center}
-    .before{background-image:url('img/antes.jpg')}  /* ↺ Trocar por foto real */
-    .after {background-image:url('img/depois.jpg')}
-    .split{position:absolute; inset:0; clip-path:inset(0 50% 0 0)}
-    .slider{accent-color:var(--accent-2); width:100%}
-    .faq details{border:1px solid color-mix(in oklab, var(--fg), transparent 88%);border-radius:12px;padding:14px}
-    .faq summary{cursor:pointer;font-weight:700}
-    footer{padding:36px 0; color:var(--muted)}
-    /* Responsivo */
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr; padding:28px 0}
-      .grid.cols-3{grid-template-columns:1fr}
-      .grid.cols-2{grid-template-columns:1fr}
-    }
-    /* A11y */
-    :focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+    /* ===== Utilities ===== */
+    .tag{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--border);color:#7a6b61;padding:.35rem .7rem;border-radius:999px;font-weight:700;font-size:.85rem}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+    .badge{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.4rem .7rem;color:#6b5f57;font-size:.85rem}
+    .card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .lead{color:var(--muted)}
+    .no-overflow{overflow:hidden}
+
+    /* ===== Sections ===== */
+    section{padding:56px 0}
+    @media (max-width:700px){section{padding:40px 0}}
+    h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.8rem,2.6vw+1rem,3.2rem);margin:12px 0 10px;line-height:1.12}
+    h2{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.5rem,1.6vw+1rem,2.3rem);margin:0 0 18px}
+    h3{margin:0 0 6px}
+
+    /* ===== Hero ===== */
+    .hero{padding:56px 0 30px;position:relative}
+    .halo{position:absolute;inset:-120px auto auto -120px;width:260px;height:260px;border-radius:50%;
+      background:radial-gradient(closest-side, rgba(214,178,143,.45), transparent 70%);filter:blur(8px)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    .hero-photo{border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);aspect-ratio:4/5;background-size:cover;background-position:center}
+
+    /* ===== Services ===== */
+    .services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    @media (max-width:900px){.services{grid-template-columns:1fr}}
+    .price{background:linear-gradient(to right,var(--accent),var(--accent-2));color:#fff;border-radius:999px;padding:.25rem .6rem;font-size:.8rem;font-weight:800}
+
+    /* ===== Portfolio ===== */
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.grid{grid-template-columns:1fr}}
+    .ph{aspect-ratio:4/5;border-radius:16px;border:1px dashed #decfbf;display:grid;place-items:center;
+      background:repeating-linear-gradient(135deg,#faf7f5,#faf7f5 10px,#f2ece6 10px,#f2ece6 20px);color:#9b877a;font-size:.85rem}
+    .ph[data-img]{background-size:cover;background-position:center;border-style:solid;color:transparent}
+    .ph:hover{transform:translateY(-2px);transition:.2s ease}
+
+    /* ===== Timeline (depoimentos) ===== */
+    .tl{position:relative;padding-left:24px}
+    .tl:before{content:"";position:absolute;left:4px;top:0;bottom:0;width:2px;background:#e8ddd3}
+    .tl-item{position:relative;margin:10px 0}
+    .tl-dot{position:absolute;left:-2px;top:6px;height:10px;width:10px;background:var(--accent-2);border-radius:50%;box-shadow:0 0 0 4px rgba(214,178,143,.25)}
+
+    /* ===== Before/After ===== */
+    .ba{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);touch-action:none}
+    .ba img{display:block;width:100%;height:auto}
+    .ba .after{position:absolute;inset:0;overflow:hidden}
+    .ba .after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--accent);box-shadow:0 0 0 2px rgba(142,75,59,.2)}
+    .ba .knob{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--accent);color:#fff;border-radius:999px;
+      padding:.55rem .9rem;font-size:.85rem;box-shadow:var(--shadow)}
+
+    /* ===== Sticky aside (desktop) ===== */
+    .schedule{position:sticky;top:90px;height:max-content}
+
+    /* ===== Footer ===== */
+    footer{background:#fff;border-top:1px solid var(--border)}
+
+    /* Prefers reduced motion */
     @media (prefers-reduced-motion: reduce){
-      *{animation:none!important; transition:none!important}
+      *{animation: none !important;transition: none !important}
     }
   </style>
 
-  <!-- JSON-LD: BeautySalon focado em maquiagem -->
+  <!-- JSON-LD (SEO Local) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BeautySalon",
-    "name":"Lara Luíza - Maquiagem BH",
-    "description":"Maquiagem que realça belezas reais em Lourdes — BH. Noivas, madrinhas, fast makeup e artística.",
-    "areaServed":"Belo Horizonte, MG",
-    "address": {"@type":"PostalAddress","addressLocality":"Lourdes","addressRegion":"MG","addressCountry":"BR"},
-    "url":"https://www.seudominio.com/",
-    "sameAs":["https://www.instagram.com/laraluizamakeup_","https://www.instagram.com/laraluizaart"],
-    "priceRange":"R$"
+    "@type":"LocalBusiness",
+    "name":"Camila Rocha",
+    "image":"FOTO-CAMILA-HERO.jpg",
+    "description":"Maquiadora em Diadema/SP. Pele luminosa, técnica leve e durável.",
+    "address": {"@type":"PostalAddress","addressLocality":"Diadema","addressRegion":"SP","addressCountry":"BR"},
+    "areaServed":"São Paulo - SP",
+    "url":"https://seu-dominio.com",  <!-- TROCAR AQUI -->
+    "sameAs":["https://instagram.com/camilarochamakeup"],
+    "telephone":"+55 11 95989-7389"
   }
   </script>
 </head>
 <body>
-<header>
-  <div class="wrap nav" role="navigation" aria-label="Topo">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
+  <!-- Header -->
+  <header class="sticky">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:.8rem 20px;gap:12px">
+      <a id="brand" href="#home" aria-label="Ir para o início">
+        <div id="brand-badge" aria-hidden="true">✨</div>
+        <div>
+          <strong style="display:block;line-height:1">Camila Rocha</strong>
+          <small style="color:var(--muted)">@camilarochamakeup • Diadema/SP</small>
+        </div>
+      </a>
+
+      <button id="menuBtn" class="btn btn-outline" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">☰</button>
+
+      <nav id="navLinks" style="display:flex;gap:18px;align-items:center">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#aulas">Automaquiagem</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#sobre">Sobre</a>
+        <a class="btn btn-primary" href="https://wa.me/5511959897389?text=Oi%20Camila!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noreferrer">Agendar no WhatsApp</a> <!-- TROCAR AQUI se necessário -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="halo" aria-hidden="true"></div>
+    <div class="container hero-grid no-overflow">
+      <!-- Coluna esquerda -->
       <div>
-        <h1>Lara Luíza</h1>
-        <div class="ghost">Maquiagem • Lourdes — BH</div>
-      </div>
-    </div>
-    <nav class="ghost" aria-label="Atalhos">
-      <a class="ghost" href="#servicos">Serviços</a> ·
-      <a class="ghost" href="#portfolio">Portfólio</a> ·
-      <a class="ghost" href="#sobre">Sobre</a> ·
-      <a class="ghost" href="#agendar">Agendar</a>
-    </nav>
-  </div>
-</header>
+        <span class="tag">Maquiadora em Diadema/SP</span>
+        <h1>Ajudo mulheres a <em style="background:linear-gradient(to right, var(--accent), var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">realçar sua beleza</em></h1>
+        <p class="lead">Pele luminosa, técnica com cuidado e leveza. <strong>+100 alunas</strong> em automaquiagem e <strong>9 anos</strong> de experiência.</p>
+        <div class="badges">
+          <span class="badge">✨ Realce sem mascarar</span>
+          <span class="badge">🎓 Instrutora</span>
+          <span class="badge">📍 Diadema/SP</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+          <a class="btn btn-primary" href="https://wa.me/5511959897389?text=Oi%20Camila!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noreferrer">Agendar no WhatsApp</a>
+          <a class="btn btn-ghost" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
 
-<main>
-  <!-- DOBRA 1 — Tese -->
-  <section class="wrap hero" id="inicio">
-    <div>
-      <h2>Beleza real, pele glow — sem exagero</h2>
-      <p class="lead">Maquiagem que respeita sua pele, seu momento e sua história. Noiva, madrinha, formatura ou um glow rápido pra te colocar pronta em minutos.</p>
-      <div class="chips" aria-label="Provas e parcerias">
-        <span class="chip">Lourdes — Belo Horizonte</span>
-        <span class="chip">@lofy.bh</span>
-        <span class="chip">Noivas • Madrinhas</span>
-        <span class="chip">Fast Makeup</span>
-        <span class="chip">Make Artística • @laraluizaart</span>
+        <div class="card" style="margin-top:20px">
+          <strong>Realçar × Não mascarar</strong>
+          <p class="lead" style="margin:.4rem 0 0;font-size:.95rem">Menos camada, mais você. Técnica que dura e respeita seu rosto.</p>
+        </div>
       </div>
-      <div class="cta">
-        <a class="btn" id="ctaWhats" href="#" rel="noopener">Agendar no WhatsApp</a>
-        <a class="btn secondary" href="https://www.instagram.com/laraluizamakeup_/" target="_blank" rel="noopener">Ver portfólio no Instagram</a>
+
+      <!-- Coluna direita: foto + agenda -->
+      <div class="hero-right">
+        <figure class="hero-photo" style="background-image:url('FOTO-CAMILA-HERO.jpg')" role="img" aria-label="Foto de Camila Rocha"></figure> <!-- TROCAR AQUI -->
+
+        <!-- Agenda rápida -->
+        <aside class="card schedule" aria-label="Agenda Rápida">
+          <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem">
+            <div style="height:34px;width:34px;border-radius:9px;background:#FFF4E6;color:#7A552A;display:grid;place-items:center" aria-hidden="true">🗓️</div>
+            <h3 style="margin:0">Agenda Rápida</h3>
+          </div>
+          <p class="lead" style="font-size:.95rem">Envie data, horário e serviço. Retorno no mesmo dia útil.</p>
+          <form id="form-agenda" class="grid" style="gap:10px;margin-top:14px">
+            <label class="field"><span>Nome</span><input id="f-nome" placeholder="Seu nome" required></label>
+            <label class="field"><span>WhatsApp</span><input id="f-wa" placeholder="(11) 9 0000-0000" inputmode="tel" required></label>
+            <label class="field"><span>Data desejada</span><input id="f-data" type="date" required></label>
+            <label class="field"><span>Serviço</span>
+              <select id="f-servico">
+                <option>Maquiagem Social</option>
+                <option>Noiva</option>
+                <option>Automaquiagem 1:1</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Pedir horário</button>
+            <a class="lead" style="color:var(--accent);text-decoration:none" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Diadema%2C%20SP">Como chegar</a>
+          </form>
+        </aside>
       </div>
     </div>
-    <figure class="photo" aria-label="Foto destaque — pele glow e olhar natural">
-      <figcaption class="badge">beleza natural ✨</figcaption>
-    </figure>
   </section>
 
-  <!-- DOBRA 2 — Prova rápida -->
-  <section class="wrap card" id="portfolio" aria-labelledby="ttl-portfolio">
-    <h3 id="ttl-portfolio">Antes & Depois</h3>
-    <div class="bna">
-      <div class="frame" aria-label="Comparador antes e depois">
-        <div class="before" role="img" aria-label="Antes — pele sem make"></div>
-        <div class="after split" role="img" aria-label="Depois — pele glow, correção natural"></div>
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Maquiagem Social <span class="price">R$ 180+</span></h3>
+          <p class="lead">Madrinhas, formandas e eventos. Pele glow que dura a noite toda.</p>
+        </div>
+        <div class="card">
+          <h3>Noiva <span class="price">sob consulta</span></h3>
+          <p class="lead">Prova + grande dia. Leveza, fotografia impecável e resistência.</p>
+        </div>
+        <div class="card">
+          <h3>Automaquiagem 1:1 <span class="price">2h • R$ 250</span></h3>
+          <p class="lead">Aula personalizada com seu kit ou do estúdio. Do skin prep ao acabamento.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:12px">
+        <h2>Portfólio</h2>
+        <a class="lead" style="text-decoration:none;color:var(--muted)" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">Ver mais no Instagram →</a>
+      </div>
+      <div class="grid no-overflow" style="margin-top:10px">
+        <!-- Substitua por imagens reais: adicione data-img com a URL -->
+        <div class="ph" data-img="FOTO-01.jpg" aria-label="Close pele glow">Imagem 1</div>  <!-- TROCAR AQUI -->
+        <div class="ph" data-img="FOTO-02.jpg" aria-label="Olhar esfumado leve">Imagem 2</div>
+        <div class="ph" data-img="FOTO-03.jpg" aria-label="Noiva clássico">Imagem 3</div>
+        <div class="ph" data-img="FOTO-04.jpg" aria-label="Madrinha elegante">Imagem 4</div>
+        <div class="ph" data-img="FOTO-05.jpg" aria-label="Aula 1:1">Imagem 5</div>
+        <div class="ph" data-img="FOTO-06.jpg" aria-label="Antes/Depois">Imagem 6</div>
+      </div>
+      <p class="lead" style="font-size:.85rem;color:var(--muted);margin-top:10px">*Comprima as fotos (WebP/JPEG) para carregar rápido.</p>
+    </div>
+  </section>
+
+  <!-- ANTES / DEPOIS -->
+  <section aria-labelledby="ab-title">
+    <div class="container">
+      <h2 id="ab-title">Antes & Depois</h2>
+      <div class="ba" id="ba">
+        <!-- Substitua os src abaixo por fotos autorizadas -->
+        <img loading="lazy" src="ANTES.jpg" alt="Foto antes da maquiagem">  <!-- TROCAR AQUI -->
+        <div class="after" id="after"><img loading="lazy" src="DEPOIS.jpg" alt="Foto depois da maquiagem"></div> <!-- TROCAR AQUI -->
+        <div class="handle" id="handle" aria-hidden="true"></div>
+        <div class="knob" id="knob" aria-label="Arraste para comparar">↔ arraste</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AULAS -->
+  <section id="aulas">
+    <div class="container no-overflow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center">
       <div>
-        <p>Correções suaves, luz na medida, boca e olhos desenhados pra realçar — sem perder você. Arraste para comparar.</p>
-        <input class="slider" type="range" min="0" max="100" value="50" aria-label="Controlar comparação antes/depois" id="bnaRange">
+        <h2>Automaquiagem 1:1</h2>
+        <p class="lead">Aprenda um ritual simples e eficaz para o dia a dia. Aula prática, do skin prep ao acabamento glow ✨.</p>
+        <ul class="lead" style="padding-left:18px;margin:12px 0;color:var(--muted)">
+          <li>Conteúdo personalizado ao seu rosto</li>
+          <li>Duração média de 2 horas</li>
+          <li>Checklist pós-aula para praticar</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://wa.me/5511959897389?text=Oi%20Camila!%20Quero%20agendar%20uma%20aula%20de%20automaquiagem." target="_blank" rel="noreferrer">Agendar no WhatsApp</a>
+          <a class="btn btn-ghost" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">Falar por DM</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="ph" data-img="AULA-01.jpg">Retrato</div>  <!-- TROCAR AQUI -->
+        <div class="ph" data-img="AULA-02.jpg">Antes/Depois</div>
+        <div class="ph" data-img="AULA-03.jpg">Setup/Studio</div>
       </div>
     </div>
   </section>
 
-  <!-- DOBRA 3 — Oferta clara -->
-  <section class="wrap" id="servicos" aria-labelledby="ttl-serv">
-    <h3 id="ttl-serv">Serviços</h3>
-    <div class="grid cols-3">
-      <article class="card service">
-        <div class="title"><strong>Noiva Atemporal</strong> <span class="price">sob consulta</span></div>
-        <small>Provas, pele blindada, timeline do dia e coordenação com hair.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Noiva Atemporal">Quero detalhes</button></div>
-      </article>
-      <article class="card service">
-        <div class="title"><strong>Madrinha & Festa</strong> <span class="price">R$ —</span></div>
-        <small>Elegância que aparece nas fotos e resiste à noite toda.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Madrinha & Festa">Quero detalhes</button></div>
-      </article>
-      <article class="card service">
-        <div class="title"><strong>Fast Makeup</strong> <span class="price">R$ —</span></div>
-        <small>Make rápida, leve e com acabamento profissional — pele glow, pronta em pouco tempo.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Fast Makeup">Quero detalhes</button></div>
-      </article>
-      <article class="card service">
-        <div class="title"><strong>Make Artística</strong> <span class="price">R$ —</span></div>
-        <small>Conceitos criativos e caracterização. Ref.: @laraluizaart.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Make Artística">Quero detalhes</button></div>
-      </article>
-      <article class="card service">
-        <div class="title"><strong>Auto Make (aula)</strong> <span class="price">R$ —</span></div>
-        <small>Técnicas na sua rotina, com seus produtos. 100% prática.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Aula de Auto Make">Quero detalhes</button></div>
-      </article>
-      <article class="card service">
-        <div class="title"><strong>Editorial & Marca</strong> <span class="price">R$ —</span></div>
-        <small>Produções para campanhas, catálogos e clipes.</small>
-        <div class="cta"><button class="btn secondary ask" data-service="Editorial & Marca">Quero detalhes</button></div>
-      </article>
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="card">“Make leve que durou a noite toda. Atendimento carinhoso.” <strong>— Priscila A.</strong></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="card">“A aula de automaquiagem me deu confiança no dia a dia!” <strong>— Michele R.</strong></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="card">“Fotos incríveis, pele impecável sem pesar.” <strong>— Cíntia G.</strong></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- DOBRA 4 — Sobre (humano) -->
-  <section class="wrap grid cols-2 card" id="sobre" aria-labelledby="ttl-sobre">
-    <div>
-      <h3 id="ttl-sobre">Sobre a Lara</h3>
-      <p>Acredito em maquiagem como cuidado: deixar a pele falar, iluminar o olhar e te colocar em cena com leveza. Meu estúdio é em Lourdes — BH, e atuo com noivas, madrinhas, formaturas e ensaios. Quando a arte pede, eu cruzo para o criativo e assino como <strong>@laraluizaart</strong>.</p>
-      <div class="panel ghost">Atendo com hora marcada. Parcerias de espaço e hair em Lourdes — BH.</div>
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container no-overflow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start">
+      <div>
+        <h2>Sobre Camila</h2>
+        <figure class="hero-photo" style="background-image:url('FOTO-CAMILA-RETRATO.jpg');aspect-ratio:1/1;border-radius:50%;width:180px;margin:0 0 12px" role="img" aria-label="Retrato de Camila Rocha"></figure> <!-- TROCAR AQUI -->
+        <p class="lead">Sou maquiadora e instrutora. Meu foco é realçar o que há de mais bonito em você, com técnica, cuidado e leveza. Atendo em Diadema/SP e região. <strong>+100 alunas</strong> em automaquiagem. <strong>9 anos</strong> de experiência.</p>
+        <div class="badges">
+          <span class="badge">🕒 Atendimento com hora marcada</span>
+          <span class="badge">📍 Diadema, SP</span>
+          <span class="badge">✨ Realce natural</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
+          <a class="btn btn-primary" href="https://wa.me/5511959897389?text=Oi%20Camila!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noreferrer">Agendar no WhatsApp</a>
+          <a class="btn btn-ghost" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="ph" data-img="SOBRE-01.jpg">Retrato</div>   <!-- TROCAR AQUI -->
+        <div class="ph" data-img="SOBRE-02.jpg">Studio/Setup</div>
+        <div class="ph" data-img="SOBRE-03.jpg">Close pele glow</div>
+      </div>
     </div>
-    <div class="card">
-      <h3>Agende seu horário</h3>
-      <form id="formAgenda" class="grid" autocomplete="on">
-        <label>Data do evento
-          <input type="date" name="data" required>
-        </label>
-        <label>Serviço
-          <select name="servico" required>
-            <option>Noiva Atemporal</option>
-            <option>Madrinha & Festa</option>
-            <option>Fast Makeup</option>
-            <option>Make Artística</option>
-            <option>Aula de Auto Make</option>
-            <option>Editorial & Marca</option>
-          </select>
-        </label>
-        <label>Seu nome
-          <input type="text" name="nome" placeholder="Seu nome" required>
-        </label>
-        <button class="btn" type="submit">Abrir WhatsApp com mensagem</button>
-        <p class="ghost">Você revisa a mensagem antes de enviar.</p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container no-overflow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start">
+      <div class="card">
+        <h2>Agende seu horário</h2>
+        <p class="lead">Envie uma mensagem com data, horário e tipo de maquiagem. Retorno no mesmo dia útil.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn btn-primary" href="https://wa.me/5511959897389?text=Oi%20Camila!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noreferrer">Agendar no WhatsApp</a>
+          <a class="btn btn-ghost" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Diadema%2C%20SP" target="_blank" rel="noreferrer">Como chegar</a>
+        </div>
+      </div>
+
+      <form id="form-contato" class="card" onsubmit="return false" aria-label="Formulário de contato">
+        <div class="field" style="display:grid;gap:6px"><span>Nome</span><input id="c-nome" placeholder="Seu nome" required></div>
+        <div class="field" style="display:grid;gap:6px"><span>WhatsApp</span><input id="c-wa" placeholder="(11) 9 0000-0000" inputmode="tel" required></div>
+        <div class="field" style="display:grid;gap:6px"><span>Mensagem</span><textarea id="c-msg" rows="4" placeholder="Conte o evento, local e horário." required></textarea></div>
+        <button class="btn btn-primary" id="c-send" type="button">Enviar pelo WhatsApp</button>
+        <p class="lead" style="font-size:.85rem;color:var(--muted)">*Este formulário compõe a mensagem e abre o WhatsApp.</p>
       </form>
     </div>
   </section>
 
-  <!-- DOBRA 5 — Fechamento -->
-  <section class="wrap faq" id="agendar" aria-labelledby="ttl-faq">
-    <h3 id="ttl-faq">Dúvidas rápidas</h3>
-    <div class="grid">
-      <details open>
-        <summary>Onde você atende?</summary>
-        <p>Base em Lourdes — BH. Para noivas e produções, atendo on‑site conforme agenda.</p>
-      </details>
-      <details>
-        <summary>O que é a Fast Makeup?</summary>
-        <p>Uma maquiagem leve e rápida, com pele glow e acabamento profissional — ideal para compromissos espontâneos.</p>
-      </details>
-      <details>
-        <summary>Como reservo a data de noiva?</summary>
-        <p>Usamos contrato e sinal para garantir seu dia. No formulário acima você já abre o WhatsApp com as infos principais.</p>
-      </details>
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;color:var(--muted)">
+      <small>© <span id="year"></span> Camila Rocha • Diadema/SP</small>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a style="color:inherit" href="https://instagram.com/camilarochamakeup" target="_blank" rel="noreferrer">@camilarochamakeup</a>
+        <a style="color:inherit" href="https://wa.me/5511959897389" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a style="color:inherit" href="https://www.google.com/maps/search/?api=1&query=Diadema%2C%20SP" target="_blank" rel="noreferrer">Mapa</a>
+      </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap">
-    <p>© <span id="year"></span> Lara Luíza — Maquiagem BH • <a href="https://www.instagram.com/laraluizamakeup_/" target="_blank" rel="noopener">@laraluizamakeup_</a> • artística: <a href="https://www.instagram.com/laraluizaart" target="_blank" rel="noopener">@laraluizaart</a></p>
-    <p class="ghost">Design e código por Dino — clareza viva na web.</p>
-  </div>
-</footer>
+  <script>
+    // Ano no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<script>
-  // ↺ CONFIGURAÇÕES — TROQUE PELO SEU NÚMERO COM DDI/DDD
-  const WHATS_APP = "5531000000000"; // ex.: 5531999999999
-
-  // Antes/Depois slider
-  const slider = document.getElementById('bnaRange');
-  const split = document.querySelector('.after.split');
-  if (slider && split){
-    const setClip = v => split.style.clipPath = `inset(0 ${100 - v}% 0 0)`;
-    setClip(slider.value);
-    slider.addEventListener('input', e => setClip(e.target.value));
-  }
-
-  // CTA WhatsApp do topo (abre mensagem simples)
-  const cta = document.getElementById('ctaWhats');
-  if (cta){
-    cta.addEventListener('click', (e)=>{
-      e.preventDefault();
-      const msg = encodeURIComponent(
-        "Oi, Lara! Vim do seu site e quero agendar uma maquiagem em Lourdes – BH. Pode me enviar as opções de horário/preço?"
-      );
-      window.open(`https://wa.me/${WHATS_APP}?text=${msg}`, '_blank', 'noopener');
+    // Marca placeholders de grid com data-img como background
+    document.querySelectorAll('.ph[data-img]').forEach(el=>{
+      el.style.backgroundImage = `url('${el.getAttribute('data-img')}')`;
+      el.setAttribute('role','img');
     });
-  }
 
-  // Formulário de agendamento com mensagem estruturada
-  const form = document.getElementById('formAgenda');
-  if (form){
-    form.addEventListener('submit', (e)=>{
+    // Mobile menu acessível
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('navLinks');
+    function closeNav(){ if(window.innerWidth<=900) nav.style.display='none'; menuBtn.setAttribute('aria-expanded','false'); }
+    function openNav(){
+      nav.style.display='flex';
+      nav.style.flexDirection='column';
+      nav.style.gap='12px';
+      nav.style.position='absolute';
+      nav.style.right='20px';
+      nav.style.top='64px';
+      nav.style.background='#fff';
+      nav.style.border='1px solid var(--border)';
+      nav.style.borderRadius='14px';
+      nav.style.padding='12px';
+      nav.style.boxShadow='0 20px 40px rgba(0,0,0,.08)';
+      menuBtn.setAttribute('aria-expanded','true');
+    }
+    if(menuBtn && nav){
+      menuBtn.addEventListener('click',()=>{ (nav.style.display==='flex') ? closeNav() : openNav(); });
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeNav));
+      window.addEventListener('resize', ()=>{ if(window.innerWidth>900){ nav.style.display='flex'; menuBtn.setAttribute('aria-expanded','false'); } else { closeNav(); } });
+    }
+
+    // Form Agenda → compõe mensagem e abre WA
+    const formAgenda = document.getElementById('form-agenda');
+    formAgenda.addEventListener('submit', (e)=>{
       e.preventDefault();
-      const fd = new FormData(form);
-      const data = fd.get('data');
-      const serv = fd.get('servico');
-      const nome = fd.get('nome') || '—';
-      const msg = encodeURIComponent(
-        `Oi, Lara! Eu sou ${nome}. Quero ${serv} na data ${data}.\nBase Lourdes – BH.\nPode me passar disponibilidade e valores?\n(Enviado pelo site)`
-      );
-      window.open(`https://wa.me/${WHATS_APP}?text=${msg}`, '_blank', 'noopener');
+      const nome = document.getElementById('f-nome').value.trim();
+      const tel = document.getElementById('f-wa').value.trim();
+      const data = document.getElementById('f-data').value;
+      const serv = document.getElementById('f-servico').value;
+      const msg = `Oi Camila! Sou ${nome}. Meu WhatsApp: ${tel}. Gostaria de agendar ${serv} para ${data}.`;
+      window.open('https://wa.me/5511959897389?text='+encodeURIComponent(msg),'_blank'); // TROCAR AQUI se mudar número
     });
-  }
 
-  // Ano no rodapé
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // Form Contato → abre WA
+    document.getElementById('c-send').addEventListener('click', ()=>{
+      const nome = document.getElementById('c-nome').value.trim();
+      const tel = document.getElementById('c-wa').value.trim();
+      const txt = document.getElementById('c-msg').value.trim();
+      if(!nome||!tel||!txt) return alert('Preencha os campos.');
+      const msg = `Oi Camila! Sou ${nome}. Meu WhatsApp: ${tel}. ${txt}`;
+      window.open('https://wa.me/5511959897389?text='+encodeURIComponent(msg),'_blank'); // TROCAR AQUI se mudar número
+    });
+
+    // Antes/Depois (slider)
+    (function(){
+      const wrap = document.getElementById('ba');
+      const after = document.getElementById('after');
+      const handle = document.getElementById('handle');
+      const knob = document.getElementById('knob');
+      if(!wrap || !after || !handle) return;
+
+      function setX(px){
+        const rect = wrap.getBoundingClientRect();
+        let x = Math.max(0, Math.min(px - rect.left, rect.width));
+        const pct = x / rect.width * 100;
+        after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+        handle.style.left = pct + '%';
+        knob.style.left = pct + '%';
+      }
+
+      let drag = false;
+      const move = (e)=>{
+        if(!drag) return;
+        if(e.touches && e.touches[0]) setX(e.touches[0].clientX);
+        else setX(e.clientX);
+      };
+      const start = (e)=>{ drag = true; move(e); e.preventDefault(); };
+      const end = ()=> drag = false;
+
+      wrap.addEventListener('mousedown', start);
+      wrap.addEventListener('mousemove', move);
+      window.addEventListener('mouseup', end);
+
+      wrap.addEventListener('touchstart', start, {passive:false});
+      wrap.addEventListener('touchmove', move, {passive:false});
+      window.addEventListener('touchend', end);
+
+      // inicia no meio
+      requestAnimationFrame(()=>{
+        const rect = wrap.getBoundingClientRect();
+        setX(rect.left + rect.width/2);
+      });
+    })();
+  </script>
 </body>
 </html>
